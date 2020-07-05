@@ -50,7 +50,7 @@ You can create a `config.json` file and load with the `--config path/to/config.j
 
 ```json
  "api": {
-    "url": "url-to-your-ibm-watson-text-to-speech-api',
+    "url": "url-to-your-ibm-watson-text-to-speech-api",
     "key": "your-apikey"
   },
   "languageVoices": {
