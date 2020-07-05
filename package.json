@@ -1,0 +1,85 @@
+{
+  "name": "csv-tts-generator",
+  "version": "1.0.0",
+  "description": "A command line program that generates audio files with Watson's TTS service, from csv or text input.",
+  "homepage": "",
+  "author": {
+    "name": "Dominik Sz.",
+    "email": "dominik.szathmary@onefootball.com",
+    "url": ""
+  },
+  "files": [
+    "app"
+  ],
+  "main": "app/index.js",
+  "keywords": [
+    ""
+  ],
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "prettier": "^1.19.1",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.3",
+    "eslint-config-prettier": "^6.6.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-config-xo": "^0.27.2",
+    "jest": "^26.1.0",
+    "lec": "^1.0.1"
+  },
+  "engines": {
+    "npm": ">= 4.0.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "xo",
+      "prettier"
+    ],
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "rules": {
+      "prettier/prettier": "warning"
+    },
+    "plugins": [
+      "prettier"
+    ]
+  },
+  "scripts": {
+    "pretest": "eslint .",
+    "test": "jest",
+    "prepare": "lec app/cli.js -c LF"
+  },
+  "repository": "git@github.com:dominikdotsat/csv-tts-generator.git",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "bin": "app/cli.js",
+  "dependencies": {
+    "@fast-csv/parse": "^4.3.1",
+    "fast-csv": "^4.3.1",
+    "fs": "0.0.1-security",
+    "ibm-watson": "^5.6.0",
+    "meow": "^3.7.0",
+    "mime-types": "^2.1.27",
+    "p-iteration": "^1.1.8",
+    "read-config": "^2.0.0",
+    "yargs": "^13.2.4"
+  },
+  "license": "Apache-2.0"
+}
