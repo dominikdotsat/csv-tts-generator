@@ -2,7 +2,7 @@
 
 >
 
-A command line probram that generates audio files with Watson's TTS service, from csv or text input.
+A command line probram that generates audio files with IBM Watson's TTS service, from csv or text input.
 
 ## Installation
 
@@ -43,6 +43,24 @@ Examples
   >> ./spanish.wav ✔
   $ csv-tts-generator --output "lesson-1-jp" --config config.json --lang jp --csv jp-sample.csv
 ```
+
+## Configuration
+
+You can create a `config.json` file and load with the `--config path/to/config.json` paramter, which looks the following:
+
+```json
+ "api": {
+    "url": "url-to-your-ibm-watson-text-to-speech-api',
+    "key": "your-apikey"
+  },
+  "languageVoices": {
+    "en": "en-US_AllisonVoice",
+    "jp": "ja-JP_EmiV3Voice"
+  },
+
+```
+
+(in the `languageVoices` object, you can provider language-voice pairs, which can be used later for speech synthesis)
 
 ## License
 
