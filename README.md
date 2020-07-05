@@ -6,6 +6,14 @@ A command line probram that generates audio files with Watson's TTS service, fro
 
 ## Installation
 
+From the folder:
+
+```sh
+  npm install -g .
+```
+
+or
+
 ```sh
 $ npm install --g csv-tts-generator
 ```
