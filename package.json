@@ -71,7 +71,7 @@
   },
   "bin": "app/cli.js",
   "dependencies": {
-    "@fast-csv/parse": "^4.3.1",
+    "@fast-csv/parse": "^4.3.6",
     "fast-csv": "^4.3.1",
     "fs": "0.0.1-security",
     "ibm-watson": "^5.6.0",
